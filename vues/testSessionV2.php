@@ -9,14 +9,8 @@
 
 
 <p>Connexion OK</p>
+<p>Bienvenue <?php echo $_SESSION["valName"] ?></p>
+
 <form action="testDestroy.php">
     <input type="submit" value="Déconnexion">
 </form>
-
-
-<?php
-    echo $_SESSION["valName"]. "<br>";
-    echo $_SESSION["testI"]. "<br>";
-
-
-?>
