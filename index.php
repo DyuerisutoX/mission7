@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -63,7 +67,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="js/rdHeureDate.js"></script>
+  <!-- Supprimer ↓ -->
+  <!-- <script src="js/rdHeureDate.js"></script> -->
 
 
 </body>

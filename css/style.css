@@ -19,3 +19,13 @@ body {
 .bg-dark{
   background-color: #5b4b66!important;
 }
+
+#msgKO
+{
+  color : red;
+}
+
+#aLaUne
+{
+  float: right;
+}

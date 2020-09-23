@@ -4,7 +4,7 @@
 
     <hr>
 
-    <form id="saisie" action="vues/testControl.php" method="POST">
+    <form id="saisie" action="control/login.php" method="POST">
         <label>Entrer votre email:</label><br />
 
         <input type="email" id="email" name="email" placeholder="exemple@gmail.com" size="25"><br /><br />
@@ -17,5 +17,21 @@
     </form>
 
     <br>
+
+    <p id="msgKO">
+        <?php
+
+            if (!isset( $_SESSION["msgErreur"]))
+            {
+
+            }
+
+            else
+            {               
+                echo $_SESSION["msgErreur"];
+                unset($_SESSION["msgErreur"]); 
+            }
+        ?>
+    </p>
 
 </div>
