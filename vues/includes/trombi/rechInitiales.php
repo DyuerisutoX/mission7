@@ -1,4 +1,5 @@
 <?php
+    //Inclut le fichier data: initiales.php
     include "./data/initiales.php";
 ?>
 
@@ -6,7 +7,7 @@
 
 <?php
     foreach ($initiales as $values)
-    {
+    {//Affiche toutes les valeurs du tableau initiales
         echo "<a id=\"initiales\" class=\"btn btn-primary\" href=\"trombi.php\">".$values."</a> ";
     }
 ?>

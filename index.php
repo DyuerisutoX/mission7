@@ -12,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Business Frontpage - Start Bootstrap Template</title>
+  <title>Accueil</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

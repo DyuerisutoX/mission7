@@ -15,7 +15,7 @@
   <title>
       <?php
         if(!(isset($_SESSION["valEmail"]) && !(isset($_SESSION["valPassword"]))))
-        {
+        {//Si on force l'entrer de la page en dur 
             echo "ERREUR login";
         }
 
@@ -37,9 +37,9 @@
 
 <body>
 
-  <?php   //cas d'erreur ==> retour vers login.html
+  <?php   //cas d'erreur ==> retour vers index.php
       if( ! (isset ($_SESSION["valEmail"]) ) && !(isset ($_SESSION["valPassword"]) ) )
-      {
+      {//Si on force l'entrer de la page en dur 
         include "vues/includes/trombi/erreurLogin.php";
       }
 

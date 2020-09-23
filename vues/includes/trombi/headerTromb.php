@@ -33,7 +33,7 @@
             </p>
 
           <form action="control/destroy.php">
-            <input id="deconnexion" class="btn-primary btn-lg" type="submit" value="Déconnexion">
+            <input id="deconnexion" class="btn-primary btn-lg" type="submit" value="Déconnexion">   <!-- Déconnexion: direction vers fichier destroy.php -->
           </form>
 
         

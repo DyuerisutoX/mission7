@@ -1,4 +1,5 @@
 <?php
+    //Inclut le fichier data: liste des section
     include "./data/liSections.php";
 ?>
 
@@ -8,8 +9,8 @@
 
     <?php 
 
-        foreach ($section as list($a, $b, $c, $d))
-        {
+        foreach ($section as list($a, $b, $c, $d))  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
+        {//Créer des cartes pour chaques valeurs dans le tableau
             echo "<div class=\"col-md-4 mb-5\">
             <div class=\"card h-100\">
                 <img class=\"card-img-top\" src=\"https://placehold.it/300x200\" alt=\"\">
