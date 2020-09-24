@@ -27,7 +27,7 @@
                 echo "
                     <tr>
                     
-                        <td><a href=\"#\" >$codeSect</a></td>
+                        <td><a href=\"section.php?sec=$codeSect\" >$codeSect</a></td>
                         <td>$libelleSect</td>
                         <td>$dateDeb</td>
                         <td>$nbreStag</td>
