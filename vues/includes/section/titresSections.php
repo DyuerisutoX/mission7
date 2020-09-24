@@ -13,7 +13,6 @@ if(isset($_GET['sec']))
         {
 
             echo "Bienvenue, vous êtes sur la page section ".$section[$s][1]. "<br>";
-            echo $section[$s][0];
             break;
         }
     }

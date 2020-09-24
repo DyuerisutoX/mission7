@@ -74,7 +74,7 @@
       <!-- /.row -->
 
       <?php
-        //   include "vues/includes/trombi/rechSection.php";
+          include "vues/includes/section/bodySection.php";
       ?>
 
       <?php

@@ -3,7 +3,7 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
 
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
           <h3 class="text-white mt-5 mb-2">Section</h3>
 
@@ -28,28 +28,20 @@
                 ?>
             </p>
 
-        <div id="zoneBtn">
+            <div id="zoneBtn">
 
-            <button id="retour" class="btn btn-primary btn-lg" onclick="retour()">Retour</button>
+                <button id="retour" class="btn btn-primary btn-lg" onclick="retour()">Retour</button>
 
 
-            <form action="control/destroy.php">
-            <input id="deconnexion" class="btn-primary btn-lg" type="submit" value="Déconnexion">   <!-- Déconnexion: direction vers fichier destroy.php -->
-            </form>
+                <form action="control/destroy.php">
+                <input id="deconnexion" class="btn-primary btn-lg" type="submit" value="Déconnexion">   <!-- Déconnexion: direction vers fichier destroy.php -->
+                </form>
+
+            
+            </div>
 
         
         </div>
-
-        
-        </div>
-
-        <div class="col-lg-6">
-
-            <img id="aLaUne" src="medias/img/aLaUne.png" alt="alaune">
-
-        </div>
-
-
 
       </div>
     </div>
