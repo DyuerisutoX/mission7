@@ -3,12 +3,23 @@
     // $name = ["Nicolas", "Yugi", "Luffy", "Toto"];
     // $password = ["azerty", "magician", "onepiece", "t"];
 
-    $login = [
-        ["nicolaslawshun@gmail.com", "Nicolas", "azerty"],
-        ["dyuerisutox974@gmail.com", "Yugi", "magician"],
-        ["luffy1010@hotmail.com", "Luffy", "onepiece"],
-        ["toto@gmail.com", "Toto", "t"]
-    ];
+    // $login = [
+    //     ["nicolaslawshun@gmail.com", "Nicolas", "azerty"],
+    //     ["dyuerisutox974@gmail.com", "Yugi", "magician"],
+    //     ["luffy1010@hotmail.com", "Luffy", "onepiece"],
+    //     ["toto@gmail.com", "Toto", "t"]
+    // ];
+
+    function getLogin() : array
+    {
+        return 
+        [
+            ["nicolaslawshun@gmail.com", "Nicolas", "azerty"],
+            ["dyuerisutox974@gmail.com", "Yugi", "magician"],
+            ["luffy1010@hotmail.com", "Luffy", "onepiece"],
+            ["toto@gmail.com", "Toto", "t"]
+        ];
+    }
 
     $i = 0;
 

@@ -14,7 +14,7 @@
 
   <title>
       <?php
-        if(!(isset($_SESSION["valEmail"]) && !(isset($_SESSION["valPassword"]))))
+        if(!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
         {//Si on force l'entrer de la page en dur 
             echo "ERREUR login";
         }

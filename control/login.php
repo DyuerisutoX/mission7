@@ -9,6 +9,8 @@
     $_SESSION["valEmail"] = $_POST["email"];                //Enregistre la valeur de l'input email dans une variable session
     $_SESSION["valPassword"] = $_POST["password"];          //Enregistre la valeur de l'input password dans une variable session
 
+    $login = getLogin();
+
     for ($i = 0; $i < count($login); $i++)
     {
         if ($_SESSION["valEmail"] == $login[$i][0])    

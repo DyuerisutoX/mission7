@@ -7,33 +7,39 @@
 
 <div class="row">
 
-    <?php 
 
-        foreach ($section as list($a, $b, $c, $d))  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
-        {//Créer des cartes pour chaques valeurs dans le tableau
-            echo "<div class=\"col-md-4 mb-5\">
-            <div class=\"card h-100\">
-                <img class=\"card-img-top\" src=\"https://placehold.it/300x200\" alt=\"\">
-                
-                <div class=\"card-body\">
-                    <h4 class=\"card-title\">" .$b. "</h4>
-                        <p lass=\"card-text\">
-                        <ul>
-                            <li>Code Section: " .$a. "</li>
-                            <li>Date de début: " .$c. "</li>
-                            <li>Nbre Stagiaires: " .$d. "</li>
-                        </ul>
-                        </p>
-                </div>
-    
-                <div class=\"card-footer\">
-                    <a href=\"#\" class=\"btn btn-primary\">Check This!</a>
-                </div>
-    
-            </div>
-        </div>";
-        }
+    <table>
 
-    ?>
+        <tr>
+            <th>Code Section</th>
+            <th>Formation</th>
+            <th>Date de début</th>
+            <th>Nbre Stagiaires</th>
+            <th>Icones</th>
+        </tr>
+
+        <?php 
+
+            $section = getListeSec();
+
+            foreach ($section as list($codeSect, $libelleSect, $dateDeb, $nbreStag, $ico))  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
+            {//Créer des cartes pour chaques valeurs dans le tableau
+                echo "
+                    <tr>
+                    
+                        <td><a href=\"#\" >$codeSect</a></td>
+                        <td>$libelleSect</td>
+                        <td>$dateDeb</td>
+                        <td>$nbreStag</td>
+                        <td><img id=\"icons\" src=\"medias/icoSect/$ico.svg\" alt=\"$ico\"</td>
+                    
+                    </tr>
+                ";
+            }
+
+        ?>
+
+    </table>
+
 
 </div>
