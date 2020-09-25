@@ -32,6 +32,6 @@
     else
     {
         $_SESSION["msgErreur"] = "Erreur indentifiants incorrects";
-        header ("location:../index.php");
+        header ("location:../accueil.php");
     }
 ?>

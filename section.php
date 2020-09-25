@@ -88,7 +88,7 @@
       <!-- /.container -->
 
       <?php
-        //   include "vues/includes/footer.php";
+          include "vues/includes/footer.php";
       ?>
 
 <?php
