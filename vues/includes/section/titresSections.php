@@ -28,6 +28,6 @@ if(isset($_GET['sec']))
 
 else
 {
-    echo "Vous n'avez pas selectionner de section en particulier. Retournez en arrière";
+    echo "Vous n'avez pas selectionner de section en particulier.";
 }
 ?>

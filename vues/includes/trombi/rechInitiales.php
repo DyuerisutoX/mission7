@@ -11,6 +11,6 @@
 
     foreach ($initiales as $values)
     {//Affiche toutes les valeurs du tableau initiales
-        echo "<a id=\"initiales\" class=\"btn btn-primary\" href=\"trombi.php\">".$values."</a> ";
+        echo "<a id=\"initiales\" class=\"btn btn-primary\" href=\"initiales.php?init=$values\">".$values."</a> ";
     }
 ?>
