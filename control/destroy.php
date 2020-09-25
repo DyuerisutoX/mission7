@@ -4,6 +4,6 @@
         session_unset();
         session_destroy(); //destroy the session
 
-    header("location:/mission7/index.php"); //to redirect back to "index.php" after logging out
+    header("location:/mission7/accueil.php"); //to redirect back to "index.php" after logging out
     exit();
 ?>
