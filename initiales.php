@@ -77,18 +77,13 @@
           include "vues/includes/initiales/bodyInit.php";
       ?>
 
-      <?php
-        //   include "vues/includes/trombi/rechInitiales.php";
-      ?>
-
-
       <!-- /.row -->
 
       </div>
       <!-- /.container -->
 
       <?php
-        //   include "vues/includes/footer.php";
+          include "vues/includes/footer.php";
       ?>
 
 <?php

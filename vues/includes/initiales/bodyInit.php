@@ -16,7 +16,7 @@
 
             for($st = 0 ; $st < count($stagiaires) ; $st++)
             {
-                if ($_GET['init'] !== substr($stagiaires[$st][2],0,1))
+                if ($_GET['init'] !== substr($stagiaires[$st][2],0,1) && $_GET['init'] !== strtolower( substr($stagiaires[$st][2],0,1)))
                 {
                     $read += 1;
                 }

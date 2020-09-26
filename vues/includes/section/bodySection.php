@@ -32,7 +32,7 @@
 
             for($st = 0 ; $st < count($stagiaires) ; $st++)
             {
-                if ($_GET['sec'] !== $stagiaires[$st][0])
+                if ($_GET['sec'] !== $stagiaires[$st][0] && $_GET['sec'] !== strtolower($stagiaires[$st][0]))
                 {
                     $read += 1;
                 }

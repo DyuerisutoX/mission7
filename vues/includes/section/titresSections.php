@@ -9,7 +9,7 @@ if(isset($_GET['sec']))
 
     for ($s = 0; $s < count($section); $s++)
     {
-        if ($nomSect == $section[$s][0])
+        if ($nomSect == $section[$s][0] || $nomSect == strtolower($section[$s][0]))
         {
 
             echo "Bienvenue, vous êtes sur la page section ".$section[$s][1]. "<br>";

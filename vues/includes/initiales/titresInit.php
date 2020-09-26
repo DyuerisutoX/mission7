@@ -9,7 +9,7 @@ if(isset($_GET['init']))
 
     for ($l = 0; $l < count($initiales); $l++)
     {
-        if ($lettre == $initiales[$l])
+        if ($lettre == $initiales[$l] || $lettre == strtolower($initiales[$l]))
         {
 
             echo "Vous avez chosi la lettre $initiales[$l] <br>";

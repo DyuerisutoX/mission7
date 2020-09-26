@@ -31,7 +31,7 @@
                         <td>$libelleSect</td>
                         <td>$dateDeb</td>
                         <td>$nbreStag</td>
-                        <td><img id=\"icons\" src=\"medias/icoSect/$ico.svg\" alt=\"$ico\"</td>
+                        <td><img id=\"icons\" src=\"medias/icoSect/$ico.svg\" alt=\"$ico\"></td>
                     
                     </tr>
                 ";
