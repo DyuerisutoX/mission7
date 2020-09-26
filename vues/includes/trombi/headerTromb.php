@@ -3,7 +3,7 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
 
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
           <h3 class="text-white mt-5 mb-2">Trombinoscope</h3>
 
@@ -38,14 +38,6 @@
 
         
         </div>
-
-        <div class="col-lg-6">
-
-            <img id="aLaUne" src="medias/img/aLaUne.png" alt="alaune">
-
-        </div>
-
-
 
       </div>
     </div>
