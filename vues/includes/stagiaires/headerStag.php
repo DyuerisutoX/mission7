@@ -5,7 +5,7 @@
 
         <div class="col-lg-12">
 
-          <h3 class="text-white mt-5 mb-2">Initiales</h3>
+          <h3 class="text-white mt-5 mb-2">Stagiaires</h3>
 
           <p class="lead mb-5 text-white-50">
                 <?php   //Afficher le nom d'utilisateur
@@ -30,11 +30,12 @@
 
             <div id="zoneBtn">
 
-                <button id="retour" class="btn btn-primary btn-lg">Retour</button>
+
+                <button id="retourFrom" class="btn btn-primary btn-lg" onclick="retour()">Retour</button>
 
 
                 <form action="control/destroy.php">
-                <input id="deconnexion" class="btn-primary btn-lg" type="submit" value="Déconnexion">   <!-- Déconnexion: direction vers fichier destroy.php -->
+                  <input id="deconnexion" class="btn-primary btn-lg" type="submit" value="Déconnexion">   <!-- Déconnexion: direction vers fichier destroy.php -->
                 </form>
 
             

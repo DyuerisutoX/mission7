@@ -4,5 +4,7 @@ $(document).ready(function ()
     {
         location.href = "trombi.php";
     })
+
+    
 })
 

@@ -30,7 +30,7 @@
 
             <div id="zoneBtn">
 
-                <button id="retour" class="btn btn-primary btn-lg" onclick="retour()">Retour</button>
+                <button id="retour" class="btn btn-primary btn-lg" >Retour</button>
 
 
                 <form action="control/destroy.php">

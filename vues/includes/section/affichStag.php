@@ -23,7 +23,7 @@
             "<tr>
 
                 <td>$codeStag</td>
-                <td><a href=\"#\" >$nom</a></td>
+                <td><a href=\"ficheStag.php?sec=$codeSect?codeStag=$codeStag\" >$nom</a></td>
                 <td><a href=\"#\" >$prenom</a></td>
                 <td>$interne</td>
                 <td><img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\"></td>
