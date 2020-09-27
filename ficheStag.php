@@ -12,6 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+
   <title>
       <?php
         if(!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
@@ -32,9 +33,18 @@
 
   <!-- Custom styles for this template -->
   <link href="css/styleSect.css" rel="stylesheet">
+  <link href="css/ficheStag.css" rel="stylesheet">
 
   <!-- Script jquery -->
   <script src="vendor/jquery/jquery.js"></script>
+
+  <link href="vendor/bootstrap/js/bootstrap.min.js" rel="stylesheet">
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -74,7 +84,7 @@
       <!-- /.row -->
 
       <?php
-        //   include "vues/includes/section/bodySection.php";
+          include "vues/includes/stagiaires/bodyStag.php";
       ?>
 
       <?php
@@ -88,7 +98,7 @@
       <!-- /.container -->
 
       <?php
-        //   include "vues/includes/footer.php";
+          include "vues/includes/footer.php";
       ?>
 
 <?php
@@ -105,3 +115,7 @@
 </body>
 
 </html>
+
+<script>
+  AOS.init();
+</script>

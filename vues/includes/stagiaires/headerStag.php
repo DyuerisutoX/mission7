@@ -30,9 +30,32 @@
 
             <div id="zoneBtn">
 
+              <?php 
+                    // include "control/retour.php";
 
-                <button id="retourFrom" class="btn btn-primary btn-lg" onclick="retour()">Retour</button>
+                    // $test = $_GET['head'];
+                    echo "<input id=\"retourFrom\" class=\"btn btn-primary btn-lg\" type = \"button\" value=\"Retour\">";
+                    
 
+                    // function retour()
+                    // {
+                    //     if ($test == "section")
+                    //     {
+                    //         header ("location:../section.php?sec=".$_GET['from']);
+                    //     }
+                
+                    //     else if ($test == "init")
+                    //     {
+                    //         header ("location:../initiales.php?=".$_GET['from']);
+                    //     }
+                    // }
+                
+                    
+
+              ?>
+
+
+                
 
                 <form action="control/destroy.php">
                   <input id="deconnexion" class="btn-primary btn-lg" type="submit" value="Déconnexion">   <!-- Déconnexion: direction vers fichier destroy.php -->
