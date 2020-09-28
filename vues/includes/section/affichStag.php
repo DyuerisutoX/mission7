@@ -13,7 +13,7 @@
 
 <?php 
 
-    $stagiaires = getListeStag();
+    // $stagiaires = getListeStag();
 
     foreach ($stagiaires as list($codeSect, $codeStag, $nom, $prenom, $dateBirth, $noTel, $ville, $mail, $interne, $photo))  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
     {//Créer des cartes pour chaques valeurs dans le tableau
@@ -23,16 +23,18 @@
             "<tr>
 
                 <td>$codeStag</td>
-                <td><a href=\"ficheStag.php?head=section&from=$codeSect&codeStag=$codeStag\" >$nom</a></td>
-                <td><a href=\"#\" >$prenom</a></td>
+                <td><a href=\"ficheStag.php?sec=$codeSect&codeStag=$codeStag\" >$nom</a></td>
+                <td><a href=\"ficheStag.php?sec=$codeSect&codeStag=$codeStag\" >$prenom</a></td>
                 <td>$interne</td>
-                <td><img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\"></td>
+                <td><a href=\"ficheStag.php?sec=$codeSect&codeStag=$codeStag\" ><img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\"></a></td>
             
             </tr>";
 
         }
 
     }
+
+
 
 ?>
 

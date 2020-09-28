@@ -25,10 +25,10 @@
 
                 <td>$codeSect</td>
                 <td>$codeStag</td>
-                <td><a href=\"ficheStag.php?head=init&from=".$_GET['init']."&codeStag=$codeStag\" >$nom</a></td>
-                <td><a href=\"#\" >$prenom</a></td>
+                <td><a href=\"ficheStag.php?init=".$_GET['init']."&codeStag=$codeStag\" >$nom</a></td>
+                <td><a href=\"ficheStag.php?init=".$_GET['init']."&codeStag=$codeStag\" >$prenom</a></td>
                 <td>$interne</td>
-                <td><img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\"></td>
+                <td><a href=\"ficheStag.php?init=".$_GET['init']."&codeStag=$codeStag\" ><img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\"></a></td>
             
             </tr>";
 

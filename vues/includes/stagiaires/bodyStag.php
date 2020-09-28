@@ -11,20 +11,45 @@
         {//Créer des cartes pour chaques valeurs dans le tableau
             if ($_GET['codeStag'] == $codeStag)
             {
-                echo "
-                <img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\">
 
-                <ul>
-                   <li>Code Stagiaires: $codeStag</li>
-                   <li>Nom: $nom</li>
-                   <li>Prénom: $prenom</li>
-                   <li>Date de naissance: $dateBirth</li>
-                   <li>GSM: $noTel</li>
-                   <li>Ville: $ville</li>
-                   <li>Mail: $mail</li>
-                   <li>Internat: $interne</li>
-                </ul>";
-                // break;
+                echo "<div class=\"container mt-5 mb-5\">
+                <div class=\"row\">
+                    <div id=\"dispo\" class=\"col-md-6 offset-md-3\">
+
+                        <img id=\"identity\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\">
+
+                        <h4>$nom $prenom</h4>
+                        <ul class=\"timeline\">
+                            <li>
+                                Section: $codeSect
+                            </li>
+
+                            <li>
+                                Date de naissance: $dateBirth
+                            </li>
+
+                            <li>
+                                GSM: $noTel
+                            </li>
+
+                            <li>
+                                Ville: $ville
+                            </li>
+
+                            <li>
+                                Mail: $mail
+                            </li>
+
+                            <li>
+                                Interne: $interne
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>";
             }
     
         }
@@ -40,10 +65,25 @@
 
         //         // else
         //         // {
-        //         //     echo var_dump ($stagiaires[$st][1]). "<br><br>";
+        //         //     echo var_dump ($stagiaires[$st][1]). \"<br><br>\";
         //         // }
 
         //     }
+
+                        // echo "
+                // <img id=\"identity\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\">
+
+                // <ul>
+                //    <li>Code Stagiaires: $codeStag</li>
+                //    <li>Nom: $nom</li>
+                //    <li>Prénom: $prenom</li>
+                //    <li>Date de naissance: $dateBirth</li>
+                //    <li>GSM: $noTel</li>
+                //    <li>Ville: $ville</li>
+                //    <li>Mail: $mail</li>
+                //    <li>Internat: $interne</li>
+                // </ul>";
+
 
     
     }

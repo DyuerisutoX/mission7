@@ -3,23 +3,39 @@
     
     if (isset($_GET['sec']))
     {
+        $body = strtoupper($_GET['sec']);
+
+        switch($body)
+        {
+            case ('DWWM'):
+            include "desc/dwwm.php";
+            break;
+
+            case ('TSSR'):
+            include "desc/tssr.php";
+            break;
+
+            case ('DW'):
+            include "desc/dw.php";
+            break;
+
+            case ('DC'):
+            include "desc/dc.php";
+            break;
+
+            case ('DR'):
+            include "desc/dr.php";
+            break;
+
+            case ('SR'):
+            include "desc/sr.php";
+            break;
+
+            default:
+            break;
+        }
 
 ?>
-
-    <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dignissimos consequuntur quisquam at, soluta illum numquam totam beatae eligendi illo fugiat distinctio molestias id 
-    veritatis eos animi dolorum optio labore.
-    </p>
-
-    <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dignissimos consequuntur quisquam at, soluta illum numquam totam beatae eligendi illo fugiat distinctio molestias id 
-    veritatis eos animi dolorum optio labore.
-    </p>
-
-    <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dignissimos consequuntur quisquam at, soluta illum numquam totam beatae eligendi illo fugiat distinctio molestias id 
-    veritatis eos animi dolorum optio labore.
-    </p>
 
     <br>
 

@@ -31,10 +31,12 @@
             <div id="zoneBtn">
 
               <?php 
-                    // include "control/retour.php";
+                    include "control/retour.php";
 
-                    // $test = $_GET['head'];
-                    echo "<input id=\"retourFrom\" class=\"btn btn-primary btn-lg\" type = \"button\" value=\"Retour\">";
+                    echo "<a id=\"retourFrom\" class=\"btn btn-primary btn-lg\" href=\"$from\">Retour</a>";
+
+
+                    // echo "<a id=\"retourFrom\" class=\"btn btn-primary btn-lg\" href=\"#\">Retour</a>";
                     
 
                     // function retour()

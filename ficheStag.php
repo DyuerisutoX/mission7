@@ -32,7 +32,6 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/styleSect.css" rel="stylesheet">
   <link href="css/ficheStag.css" rel="stylesheet">
 
   <!-- Script jquery -->
@@ -41,10 +40,6 @@
   <link href="vendor/bootstrap/js/bootstrap.min.js" rel="stylesheet">
   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <!------ Include the above in your HEAD tag ---------->
-
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -115,7 +110,3 @@
 </body>
 
 </html>
-
-<script>
-  AOS.init();
-</script>
