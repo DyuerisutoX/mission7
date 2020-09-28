@@ -18,20 +18,20 @@
 
     <br>
 
-    <p id="msgKO">
+    <!-- <p id="msgKO">
         <?php
 
-            if (!isset( $_SESSION["msgErreur"]))
-            {
+            // if (!isset( $_SESSION["msgErreur"]))
+            // {
 
-            }
+            // }
 
-            else
-            {               
-                echo $_SESSION["msgErreur"];
-                unset($_SESSION["msgErreur"]); 
-            }
+            // else
+            // {               
+            //     echo $_SESSION["msgErreur"];
+            //     unset($_SESSION["msgErreur"]); 
+            // }
         ?>
-    </p>
+    </p> -->
 
 </div>

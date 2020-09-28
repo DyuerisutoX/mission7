@@ -1,7 +1,3 @@
-<?php
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,12 +22,12 @@
 
   <!-- Navigation -->
     <?php
-        include "vues/includes/nav.php";
+        include "vues/includes/accueil/nav.php";
     ?>
   <!-- Header -->
 
     <?php
-        include "vues/includes/header.php";
+        include "vues/includes/accueil/header.php";
     ?>
 
   <!-- Page Content -->
@@ -40,11 +36,11 @@
         <div class="row">
 
             <?php
-                include "vues/includes/zoneA.php";
+                include "vues/includes/accueil/zoneA.php";
             ?>
 
             <?php
-                include "vues/includes/zoneB.php";
+                include "vues/includes/accueil/zoneB.php";
             ?>
 
         </div>
@@ -52,7 +48,7 @@
         <!-- /.row -->
 
         <?php
-            include "vues/includes/news.php";
+            include "vues/includes/accueil/news.php";
         ?>
 
         <!-- /.row -->
@@ -61,7 +57,7 @@
   <!-- /.container -->
 
     <?php
-        include "vues/includes/footer.php";
+        include "vues/includes/accueil/footer.php";
     ?>
 
   <!-- Bootstrap core JavaScript -->
