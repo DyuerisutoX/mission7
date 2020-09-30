@@ -22,12 +22,12 @@
 
   <!-- Navigation -->
     <?php
-        include "vues/includes/accueil/nav.php";
+        include "includes/accueil/nav.php";
     ?>
   <!-- Header -->
 
     <?php
-        include "vues/includes/accueil/header.php";
+        include "includes/accueil/header.php";
     ?>
 
   <!-- Page Content -->
@@ -36,11 +36,11 @@
         <div class="row">
 
             <?php
-                include "vues/includes/accueil/zoneA.php";
+                include "includes/accueil/zoneA.php";
             ?>
 
             <?php
-                include "vues/includes/accueil/zoneB.php";
+                include "includes/accueil/zoneB.php";
             ?>
 
         </div>
@@ -48,7 +48,7 @@
         <!-- /.row -->
 
         <?php
-            include "vues/includes/accueil/news.php";
+            include "includes/accueil/news.php";
         ?>
 
         <!-- /.row -->
@@ -57,7 +57,7 @@
   <!-- /.container -->
 
     <?php
-        include "vues/includes/accueil/footer.php";
+        include "includes/footerComm.php";
     ?>
 
   <!-- Bootstrap core JavaScript -->

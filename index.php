@@ -1,23 +1,71 @@
 <?php
     session_start();
-    // include "control/param.php";
-    // $action = $_GET['action'];
-    // $erreur = $_GET['error'];
-    include "control/controlAcc.php";
-    include $view;
-    // include "accueil.php";
-    // include $view;
+    // include "models/data.php";
 
-    // if(isset($action) && isset($erreur))
-    // {
-    //     echo "Il y a quelque chose dans action qui est \$_GET['action'].......(" .$action. ")<br><br>";
-    //     echo "Il y a quelque chose dans error qui est \$_GET['error'].......(" .$erreur. ")";
-    // }
-
-    // else
-    // {
-    //     echo "Il n'y a rien dans action. \$_GET['action'].......(" .$action. ")<br><br>";
-    //     echo "Il n'y a rien dans error. \$_GET['error'].......(" .$erreur. ")";
-    // }
     // echo $_GET['action'];
+
+    if (isset($_GET['action']))
+    {
+        $action = $_GET['action'];
+
+        if (isset($_GET['error']))
+        {
+            $erreur = $_GET['error'];
+        }
+
+    }
+
+    switch ($action)
+    {
+        case "accueil":
+        include "control/cAcc.php";
+        break;
+
+        case "trombi":
+        include "control/cTrombi.php";
+        break;
+
+        case "connex":
+        include "control/cLogin.php";
+        break;
+
+        case "deconn":
+        include "control/cDestroy.php";
+        break;
+
+        case "sec":
+        include "control/cSection.php";
+        break;    
+
+        case "init":
+        include "control/cInit.php";
+        break;
+
+        case "403" :
+        include "control/cP403.php";
+        break;
+
+        case "404" :
+        include "control/cP404.php";
+        break;
+    
+        default:
+        include "control/cAcc.php";
+        break;
+
+    }
+
+
+    include $view;
+    // echo $action;
+    // echo $error;
+
+    // echo $view;
+    // echo $_GET['action'];
+
+    // echo "
+    // Valeur \$_SESSION['valEmail'].....(" .$_SESSION["valEmail"]. ")<br>
+    // Valeur \$_SESSION['valPassword'].....(" .$_SESSION["valPassword"]. ")<br>
+    // Valeur \$_SESSION['valName'].....(" .$_SESSION["valName"]. ")<br>";
+
 ?>

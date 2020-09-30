@@ -1,16 +1,18 @@
 <h2>
     <?php
 
-        if ($_GET['sec'] = " ")
+        if ($nomSect)
         {
+            echo "Aucun stagiaires dans la section " .$libSect;
             //Aucun affichage
         }
 
         else
         {
-            echo "Aucun stagiaires dans la section " .$section[$s][1];
+            // echo "Aucun stagiaires dans la section " .$libSect;
 
         }
 
     ?>
+
 </h2>

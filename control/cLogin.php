@@ -1,11 +1,11 @@
 <?php
 
     //inclusion du tableau login
-    include "../data/login.php";
+    include "./models/data.php";
 
 
     //page de contrôle de login
-    session_start();
+    // session_start();
     $_SESSION["valEmail"] = $_POST["email"];                //Enregistre la valeur de l'input email dans une variable session
     $_SESSION["valPassword"] = $_POST["password"];          //Enregistre la valeur de l'input password dans une variable session
 
@@ -26,12 +26,12 @@
 
     if ($_SESSION["valEmail"] == $login[$i][0] && $_SESSION["valPassword"] == $login[$i][2])
     {//Si valeur de la variable SESSION["valEmail"] et SESSION["valPassword"] correspond aux valeur du tableau login
-        header ("location:../trombi.php");      //Redirection vers testSessionV2.php
+        header ("location:index.php?action=trombi");      //Redirection vers testSessionV2.php
     }
 
     else
     {
-        $_SESSION["msgErreur"] = "Erreur indentifiants incorrects";
-        header ("location:../accueil.php");
+        session_unset();
+        header ("location:index.php?action=accueil&error=1");
     }
 ?>

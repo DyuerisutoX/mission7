@@ -1,15 +1,17 @@
 <h2>
     <?php
 
-        if ($_GET['init'] = " ")
-        {
-            //Aucun affichage
-        }
+        // if ($lettre = "")
+        // {
+        //     //Aucun affichage
+        // }
 
-        else
-        {
-            echo "Aucun stagiaires commençant par " .$_GET['init'];
-        }
+        // else
+        // {
+        //     echo "Aucun stagiaires commençant par " .$lettre;
+        // }
 
     ?>
+
+    Aucun stagiaires commençant par <?php echo $lettre; ?>
 </h2>

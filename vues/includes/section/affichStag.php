@@ -1,4 +1,4 @@
-<h2>Liste des stagiaires de <?php echo $_GET['sec']; ?>:</h2>
+<h2>Liste des stagiaires de <?php echo $nomSect; ?>:</h2>
 <br><br>
 
 <table>
@@ -17,7 +17,7 @@
 
     foreach ($stagiaires as list($codeSect, $codeStag, $nom, $prenom, $dateBirth, $noTel, $ville, $mail, $interne, $photo))  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
     {//Créer des cartes pour chaques valeurs dans le tableau
-        if ($_GET['sec'] == $codeSect || $_GET['sec'] == strtolower($codeSect))
+        if ($nomSect == $codeSect || $nomSect == strtolower($codeSect))
         {
             echo 
             "<tr>

@@ -43,6 +43,8 @@
   {
     background-color: #5b4b66!important;
     border-color: #5b4b66!important;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 0px black;
   }
 
   #initiales
