@@ -23,10 +23,10 @@
             "<tr>
 
                 <td>$codeStag</td>
-                <td><a href=\"ficheStag.php?sec=$codeSect&codeStag=$codeStag\" >$nom</a></td>
-                <td><a href=\"ficheStag.php?sec=$codeSect&codeStag=$codeStag\" >$prenom</a></td>
+                <td><a href=\"index.php?action=fiche&sec=$codeSect&codeStag=$codeStag\" >$nom</a></td>
+                <td><a href=\"index.php?action=fiche&sec=$codeSect&codeStag=$codeStag\" >$prenom</a></td>
                 <td>$interne</td>
-                <td><a href=\"ficheStag.php?sec=$codeSect&codeStag=$codeStag\" ><img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\"></a></td>
+                <td><a href=\"index.php?action=fiche&sec=$codeSect&codeStag=$codeStag\" ><img id=\"mini\" src=\"medias/photos/".strtolower($codeSect)."/$photo.jpg\" alt=\"$photo\"></a></td>
             
             </tr>";
 

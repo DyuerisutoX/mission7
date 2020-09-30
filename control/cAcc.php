@@ -2,6 +2,43 @@
 
     if (isset($action) && $action == "accueil")
     {
+
+        include "models/data.php";
+
+        date_default_timezone_set("Indian/Reunion");
+        switch(true)
+        {
+            case strftime("%R") < 12:
+            $serveur ="Bonjour";
+            break;
+
+            case strftime("%R") < 18:
+            $serveur ="Bon après-midi";
+            break;
+
+            default:
+            $serveur ="Bonsoir";
+        }
+        
+        setlocale(LC_TIME, 'french');    // indique que PHP doit envoyer des mots en français (ex : date)
+        //date_default_timezone_set("Indian/Reunion");
+
+        strftime("%e %B %Y");
+
+        if (strftime("%e") !== "1")   // ajoute "er" en exposant quand la date indique le premier
+        {
+          $heure = "Nous sommes le " .strftime("%e %B %Y") . ", ";
+          //var_dump(strftime($dateT2));
+        }
+        else
+        {
+          $heure = strftime("%e<sup>er</sup> %B %Y") . ", ";
+        }
+  
+        $heure.= " et il est " .strftime("%R") . "<br>";
+
+        $news = getNews(2);
+
         if(isset($action) && isset($erreur))
         {
 

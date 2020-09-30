@@ -8,13 +8,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Initiales</title>
+  <title>Fiche Stagiaire</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/styleSect.css" rel="stylesheet">
+  <link href="css/ficheStag.css" rel="stylesheet">
 
   <!-- Script jquery -->
   <script src="vendor/jquery/jquery.js"></script>
@@ -38,7 +38,7 @@
         <?php 
 
             // include "includes/section/titresSections.php";
-            echo $titre;
+            // echo $titre;
 
         ?>
 
@@ -48,8 +48,9 @@
     <!-- /.row -->
 
     <?php
-        include $body;
+        echo $profil;
     ?>
+
 
 
     <!-- /.row -->

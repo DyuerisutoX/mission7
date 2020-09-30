@@ -1,15 +1,15 @@
 <h2>
     <?php
 
-        if ($nomSect)
+        if ($titre == "Section inexistante")
         {
-            echo "Aucun stagiaires dans la section " .$libSect;
+            // echo "Aucun stagiaires dans la section " .$libSect;
             //Aucun affichage
         }
 
         else
         {
-            // echo "Aucun stagiaires dans la section " .$libSect;
+            echo "Aucun stagiaires dans la section " .$libSect;
 
         }
 

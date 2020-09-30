@@ -46,6 +46,31 @@
         ];
     }
 
+    function getNews($latest) : array
+    {
+        if ($latest == 3)
+        {
+            return 
+            [
+                ["One Piece", "Le roi des pirates, çe sera moi !"],
+                ["Yu-Gi-Oh!", "C'est l'heure du Duel !"],
+                ["Naruto", "Je ne renonçerais pas à mon rêve de devenir Hokage"]
+            ];
+    
+        }
+
+        else if ($latest == 2)
+        {
+            return 
+            [
+                ["One Piece", "Le roi des pirates, çe sera moi !"],
+                ["Yu-Gi-Oh!", "C'est l'heure du Duel !"]
+            ];
+        }
+    }
+
+
+
 
 ?>
 

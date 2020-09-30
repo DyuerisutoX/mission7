@@ -1,17 +1,18 @@
 <h2>
     <?php
 
-        // if ($lettre = "")
-        // {
-        //     //Aucun affichage
-        // }
+        if ($titre == "Initiales inexistante")
+        {
+            // echo "Aucun stagiaires dans la section " .$libSect;
+            //Aucun affichage
+        }
 
-        // else
-        // {
-        //     echo "Aucun stagiaires commençant par " .$lettre;
-        // }
+        else
+        {
+            echo "Aucun stagiaires commençant par $lettre";
+
+        }
 
     ?>
 
-    Aucun stagiaires commençant par <?php echo $lettre; ?>
 </h2>

@@ -41,6 +41,10 @@
         include "control/cInit.php";
         break;
 
+        case "fiche":
+        include "control/cFiche.php";
+        break;
+
         case "403" :
         include "control/cP403.php";
         break;

@@ -1,7 +1,6 @@
 <?php
         if(isset($action) && $action == "sec")
         {
-
             if (!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
             {
                 //$view = "vues/vPage403.php";
@@ -32,7 +31,6 @@
 
                 if ($s == count($section))
                 {
-                    // $s;
                     $libSect = "";
                     $titre = "Section inexistante";
                 }
@@ -49,14 +47,11 @@
 
                 if ($read == count($stagiaires))
                 {
-                    // $body = "includes/section/aucunStag.php";
-                    $msg = "Aucun stagiaire dans la section" .$libSect;
                     $body = "aucunStag.php";
                 }
     
                 else
                 {
-                    // $body = "includes/section/affichStag.php";
                     $body = "affichStag.php";
                 }
     
@@ -64,18 +59,12 @@
                 $view = "vues/vSection.php";
             }
 
-            else
+
+            else 
             {
                 header("location:index.php?action=trombi");
             }
-
-    
             
-        }
-
-        else
-        {
-            header("location:index.php?action=404");
         }
         
 ?>
