@@ -18,6 +18,15 @@
 
             foreach ($section as list($codeSect, $libelleSect, $dateDeb, $nbreStag, $ico))  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
             {//Créer des cartes pour chaques valeurs dans le tableau
+                
+                for ($a = 0; $a <count($stagiaires); $a++)
+                {
+                    if ($codeSect == $stagiaires[$a][0])
+                    {
+                        $nbreStag = $nbreStag + 1;
+                    }
+                }
+
                 echo "
                     <tr>
                     
@@ -30,6 +39,10 @@
                     </tr>
                 ";
             }
+
+            
+            // $section[0][3] = "24";
+            // echo $section[0][3];
 
         ?>
 

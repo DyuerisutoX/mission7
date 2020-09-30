@@ -1,4 +1,4 @@
-<h2>Liste des stagiaires de <?php echo $nomSect; ?>:</h2>
+<h2>Liste des stagiaires de <?php echo strtoupper($nomSect); ?>:</h2>
 <br><br>
 
 <table>

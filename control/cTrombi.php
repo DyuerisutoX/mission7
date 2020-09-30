@@ -16,6 +16,16 @@
                     include "./models/data.php";
                     $section = getListeSec();
                     $initiales = getInitiales();
+                    $stagiaires = getListeStag();
+
+                    // for ($a = 0; $a < count($stagiaires); $a++)
+                    // {
+                    //     if ($section[$a][0] == $stagiaires[$a][0])
+                    //     {
+                           
+                    //     }
+                    // }
+                    $nbeStag = count($section);
 
                     $retour= "";
 
