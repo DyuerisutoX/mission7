@@ -23,7 +23,7 @@
                 {
                     if ($lettre == $initiales[$l] || $lettre == strtolower($initiales[$l]))
                     {
-                        $titre = "Vous avez chosi la lettre $initiales[$l] <br>";
+                        $titre = "Vous avez choisi la lettre $initiales[$l] <br>";
                         break;
                     }
                 
@@ -46,13 +46,11 @@
 
                 if ($read == count($stagiaires))
                 {
-                    // $body = "includes/section/aucunStag.php";
                     $body = "includes/initiales/aucunStag.php";
                 }
     
                 else
                 {
-                    // $body = "includes/section/affichStag.php";
                     $body = "includes/initiales/affichStag.php";
                 }
     

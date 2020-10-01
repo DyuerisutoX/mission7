@@ -16,14 +16,14 @@
             {
                 $sec = $_GET['sec'];
                 $from = "?action=sec&codeSect=$sec";
-                $test = "?action=sec&codeSect=$sec";
+                // $test = "?action=sec&codeSect=$sec";
             }
 
             else if (isset($_GET['init']))
             {
                 $init = $_GET['init'];
                 $from = "?action=init&lettr=$init";
-                $test = "?action=init&lettr=$init";
+                // $test = "?action=init&lettr=$init";
             }
 
             if (isset($_GET['codeStag']))
