@@ -8,7 +8,6 @@
         session_destroy(); //destroy the session
     
     
-        header("location:index.php?action=acc"); //to redirect back to "index.php" after logging out
-        // exit();
+        header("location:index.php?action=accueil"); //redirection  vers la page accueil
     }
 ?>

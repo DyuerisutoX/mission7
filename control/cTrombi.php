@@ -1,46 +1,35 @@
 <?php
-        if(isset($action))
+    //Test si on a une valeur dans action
+    if(isset($action))
+    {
+        //Si action vaut trombi
+        if ($action == "trombi")
         {
 
-            if ($action == "trombi")
-            {
-
-                if (!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
-                {
-                    //$view = "vues/vPage403.php";
-                    header("location:index.php?action=accueil&error=2");
-                }
-
-                else
-                {
-                    include "./models/sectionManager.php";
-                    include "./models/stagiairesManager.php";
-                    include "./models/initialesManager.php";
-
-                    $tabSection = getListeSec();
-                    $initiales = getInitiales();
-                    $tabStagiaires = getListeStag();
-                    
-
-                    // foreach ($tabStagiaires as $stag)         //$a = 0; $a < count($stagiaires); $a++
-                    // {
-                    //     $secStag = $stag['codeSec'];
-                    //     if ($section[$a][0] == $stagiaires[$a][0])
-                    //     {
-                           
-                    //     }
-                    // }
-
-                    $nbeStag = count($tabStagiaires);
-
-                    $retour= "";
-
-
-                    $header = "Trombinoscope";
-                    $view = "vues/vTrombi.php";
-                }
-    
+            if (!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
+            {//Si session n'existe pas direction vers page accueil
+                header("location:index.php?action=accueil&error=2");
             }
+
+            else
+            {
+                //Charge les fichiers managers
+                include "./models/sectionManager.php";
+                include "./models/stagiairesManager.php";
+                include "./models/initialesManager.php";
+
+                $tabSection = getListeSec();
+                $initiales = getInitiales();
+                $tabStagiaires = getListeStag();
+                
+                $retour= "";
+
+                //Titres du header et le cheminement du fichier vTrombi
+                $header = "Trombinoscope";
+                $view = "vues/vTrombi.php";
+            }
+
         }
+    }
         
 ?>

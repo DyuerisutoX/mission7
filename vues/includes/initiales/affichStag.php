@@ -1,6 +1,7 @@
-<!-- <h2>Liste des stagiaires commençant par: <?php echo $lettre; ?>:</h2>
+<!-- Titre pour l'initiale choisi -->
+<h2>Liste des stagiaires commençant par: <?php echo $lettre; ?>:</h2>
 <br><br>
- -->
+
 <table>
 
 <tr>
@@ -14,8 +15,9 @@
 
 <?php 
 
-    foreach ($tabStagiaires as $stag)  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
-    {//Créer des cartes pour chaques valeurs dans le tableau
+    foreach ($tabStagiaires as $stag)
+    {//Créer des lignes de tableau
+     //Vars pour stocker la val de la bdd
 
         $codeStag = $stag['codeSta'];
         $codeSect = $stag['codeSec'];
@@ -25,7 +27,7 @@
         $photo = strtolower($nom). "_" .strtolower($prenom);
 
         if ($lettre == substr($nom, 0, 1) || $lettre == strtolower(substr($nom, 0, 1)))
-        {
+        {//Affiche tous les stagiaires dont la 1ere lettre du nom correspond à notre $_GET['lettr']
             echo 
             "<tr>
 

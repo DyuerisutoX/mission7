@@ -6,11 +6,12 @@
         <div class="col-lg-6">
 
           <h1 id="msg" class="display-4 text-white mt-5 mb-2">
-
+            <!-- Affiche message de bienvenue -->
             <?php echo $serveur; ?>
 
           </h1>
-
+          
+          <!-- Affiche date et heure -->
           <p id="zoneDateEtHeure"class="lead mb-5 text-white-50">
             <?php echo $heure; ?>
           </p>

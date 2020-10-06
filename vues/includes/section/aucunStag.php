@@ -3,8 +3,6 @@
 
         if ($titre == "Section inexistante")
         {
-            // echo "Aucun stagiaires dans la section " .$libSect;
-            //Aucun affichage
 
 
         }

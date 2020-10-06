@@ -1,9 +1,10 @@
 <?php
 
+    //Si notre $_GET['action'] vaut accueil
     if (isset($action) && $action == "accueil")
     {
 
-        // include "models/data.php";
+        // inclusion de newsManager pour recuperer le tableau des news
         include "models/newsManager.php";
 
         date_default_timezone_set("Indian/Reunion");
@@ -22,14 +23,12 @@
         }
         
         setlocale(LC_TIME, 'french');    // indique que PHP doit envoyer des mots en français (ex : date)
-        //date_default_timezone_set("Indian/Reunion");
 
         strftime("%e %B %Y");
 
         if (strftime("%e") !== "1")   // ajoute "er" en exposant quand la date indique le premier
         {
           $heure = "Nous sommes le " .strftime("%e %B %Y") . ", ";
-          //var_dump(strftime($dateT2));
         }
         else
         {
@@ -38,17 +37,19 @@
   
         $heure.= " et il est " .strftime("%R") . "<br>";
 
+        //Var qui recupere les valeurs de news
         $tabNews = getNews(3);
 
+        //Si on a un $_GET['erreur']
         if(isset($action) && isset($erreur))
         {
-
+            //Cas où la connexion à échoué
             if ($action == "accueil" && $erreur == 1)
             {
                 $msgErreur = "Identifiants ou mot de passe incorrects";
                 $view = "vues/vAccueil.php";
             }
-
+            //Cas où la session à expiré
             else if ($action == "accueil" && $erreur == 2)
             {
                 $msgErreur = "Session déconnecté ou expiré";
@@ -63,6 +64,7 @@
         
         }
 
+        //Affiche le contenu de accueil dans le fichier index
         else
         {
             $msgErreur = "";
@@ -72,6 +74,7 @@
 
     }
 
+    //Si la saisie de action est accueil ou bien une autre valeur quelquonque, la page se redirige vers accueil
     else
     {
         header("location:index.php?action=accueil");

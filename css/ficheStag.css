@@ -3,6 +3,8 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
  */
+
+ /*Couleur des boutons*/
  .bg-primary {
     background-color: #874FB3!important;
   }
@@ -21,6 +23,7 @@
     color : red;
   }
 
+  /*Position image*/
   #aLaUne
   {
     width: 200px;
@@ -33,12 +36,7 @@
     padding-bottom: 1rem!important;
     padding-top: 1rem!important;
   }
-/* 
-  #tiSect
-  {
-    margin-top : 15px;
-  }
- */
+
   #deconnexion
   {
     background-color: #5b4b66!important;
@@ -70,11 +68,14 @@
     display: flex;
   }
 
-  ul.timeline {
+  ul.timeline 
+  {
     list-style-type: none;
     position: relative;
-}
-ul.timeline:before {
+  }
+
+  ul.timeline:before 
+  {
     content: ' ';
     background: #d4d9df;
     display: inline-block;
@@ -83,12 +84,16 @@ ul.timeline:before {
     width: 2px;
     height: 100%;
     z-index: 400;
-}
-ul.timeline > li {
+  }
+
+  ul.timeline > li 
+  {
     margin: 20px 0;
     padding-left: 20px;
-}
-ul.timeline > li:before {
+  }
+
+  ul.timeline > li:before 
+  {
     content: ' ';
     background: white;
     display: inline-block;
@@ -99,9 +104,9 @@ ul.timeline > li:before {
     width: 20px;
     height: 20px;
     z-index: 400;
-}
+  }
 
-li
-{
-  color:#874FB3;
-}
+  li
+  {
+    color:#874FB3;
+  }

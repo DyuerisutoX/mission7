@@ -26,7 +26,7 @@
                 $ico = strtolower($codeSect);
                 $nbreStag = 0;
 
-                //COmpte le nombre de stagiaires dans chaque sections
+                //Compte le nombre de stagiaires dans chaque sections
                 for ($a = 0; $a < count($tabStagiaires); $a++)
                 {
                     if ($codeSect == $tabStagiaires[$a]['codeSec'])

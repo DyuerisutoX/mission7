@@ -3,12 +3,12 @@
 
         if ($titre == "Initiales inexistante")
         {
-            // echo "Aucun stagiaires dans la section " .$libSect;
-            //Aucun affichage
+            //Si l'initiales n'existe pas dans la bdd
         }
 
         else
         {
+            //Si aucun stagiare qui ne commence par la lettre choisie:
             echo "Aucun stagiaires commençant par $lettre";
 
         }

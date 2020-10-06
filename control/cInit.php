@@ -1,79 +1,77 @@
 <?php
-        if(isset($action) && $action == "init")
-        {
+    //Test si on a une valeur dans action et qu'elle vaut init
+    if(isset($action) && $action == "init")
+    {
 
-            if (!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
-            {
-                //$view = "vues/vPage403.php";
-                header("location:index.php?action=403");
+        if (!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
+        {//Si session n'existe pas direction vers page 403
+            header("location:index.php?action=403");
+        }
+
+        //Si on a un 2e paramètre lettr
+        if (isset($_GET['lettr']))
+        {
+            include "./models/stagiairesManager.php";
+            include "./models/initialesManager.php";
+
+            $retour = "<a href=\"index.php?action=trombi\" id=\"retour\" class=\"btn btn-primary btn-lg\" >Retour</a>";
+
+            $lettre = $_GET['lettr'];
+            $initiales = getInitiales();
+            $tabStagiaires = getListeStag();
+            $read = 0;
+
+            for ($l = 0; $l < count($initiales); $l++)
+            {//Affiche en titre la lettre sélectionner issu du tableau initiales
+                if ($lettre == $initiales[$l] || $lettre == strtolower($initiales[$l]))
+                {
+                    $titre = "Vous avez choisi la lettre $initiales[$l] <br>";
+                    break;
+                }
+            
             }
 
-            if (isset($_GET['lettr']))
+            //Si la lettre ne se trouve pas dans le tableau initiales
+            if ($l == count($initiales))
             {
-                include "./models/stagiairesManager.php";
-                include "./models/initialesManager.php";
+                $titre = "Initiales inexistante";
+            }
 
-                $retour = "<a href=\"index.php?action=trombi\" id=\"retour\" class=\"btn btn-primary btn-lg\" >Retour</a>";
+            //Teste si la lettre choisie correspond à la 1ere lettre du nom d'un stagiaire
+            for($st = 0 ; $st < count($tabStagiaires) ; $st++)
+            {
 
-                $lettre = $_GET['lettr'];
-                $initiales = getInitiales();
-                $tabStagiaires = getListeStag();
-                $read = 0;
-                // $st = 0;
-
-                for ($l = 0; $l < count($initiales); $l++)
+                if ($lettre !== substr($tabStagiaires[$st]['nomSta'],0,1) && $lettre !== strtolower( substr($tabStagiaires[$st]['nomSta'],0,1)))
                 {
-                    if ($lettre == $initiales[$l] || $lettre == strtolower($initiales[$l]))
-                    {
-                        $titre = "Vous avez choisi la lettre $initiales[$l] <br>";
-                        break;
-                    }
-                
+                    $read += 1;
                 }
 
-                if ($l == count($initiales))
-                {
-                    $titre = "Initiales inexistante";
-                }
+            }
 
-
-                for($st = 0 ; $st < count($tabStagiaires) ; $st++)
-                {
-                    // $nom = $tabStagiaires['nomSta']
-
-                    if ($lettre !== substr($tabStagiaires[$st]['nomSta'],0,1) && $lettre !== strtolower( substr($tabStagiaires[$st]['nomSta'],0,1)))
-                    {
-                        $read += 1;
-                    }
-
-                }
-
-                if ($read == count($tabStagiaires))
-                {
-                    $body = "includes/initiales/aucunStag.php";
-                }
-    
-                else
-                {
-                    $body = "includes/initiales/affichStag.php";
-                }
-    
-                $header = "Initiales";
-                $view = "vues/vInit.php";
+            //Si aucun stagaire ne correspond
+            if ($read == count($tabStagiaires))
+            {//Le corps de incluera le fichier aucunStag
+                $body = "includes/initiales/aucunStag.php";
             }
 
             else
-            {
-                header("location:index.php?action=trombi");
+            {//Sinon incluera le fichier afficheStag
+                $body = "includes/initiales/affichStag.php";
             }
 
-    
-            
+            //Titres du header et le cheminement du fichier vInit
+            $header = "Initiales";
+            $view = "vues/vInit.php";
         }
 
+        //Si un seul param action = init
         else
-        {
-            header("location:index.php?action=404");
+        {//Redirection
+            header("location:index.php?action=trombi");
         }
+
+
+        
+    }
         
 ?>

@@ -1,7 +1,5 @@
 <?php
 
-    //inclusion du tableau login
-    // include "./models/data.php";
     include "models/usersManager.php";
 
 
@@ -20,7 +18,7 @@
         $role = $login["rol"];
         $nom = $login["nom"];
 
-        if ($_SESSION["valEmail"] == $email)    
+        if ($_SESSION["valEmail"] == $email)
         //Si valeur de la variable SESSION["valEmail"] correspond aux valeur du tableau login
         {
             $_SESSION["valName"] = $nom; 
@@ -34,7 +32,7 @@
 
     if ($_SESSION["valEmail"] == $email && $_SESSION["valPassword"] == $pwd)
     {//Si valeur de la variable SESSION["valEmail"] et SESSION["valPassword"] correspond aux valeur du tableau login
-        header ("location:index.php?action=trombi");      //Redirection vers testSessionV2.php
+        header ("location:index.php?action=trombi");
     }
 
     else

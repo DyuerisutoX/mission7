@@ -5,13 +5,14 @@
 
         if (!(isset($_SESSION["valEmail"])) && !(isset($_SESSION["valPassword"])))
         {
-            //$view = "vues/vPage403.php";
+            //Direction vers la page 403
             header("location:index.php?action=403");
         }
 
+        //Test si on à un $_GET['sec'] ou bien un $_GET[''ini dans l'url]
         if (isset($_GET['sec']) || isset($_GET['init']))
         {
-
+            //Suivant les cas, notre bouton retour se redirige vers section ou bien initiales
             if (isset($_GET['sec']))
             {
                 $sec = $_GET['sec'];
@@ -24,19 +25,18 @@
                 $from = "?action=init&lettr=$init";
             }
 
+            //Vérifie si $_GET['codeStag'] possède une valeur
             if (isset($_GET['codeStag']))
             {
                 include "./models/stagiairesManager.php";
-    
+                
+                //Valeur du bouton retour
                 $retour = "<a href=\"index.php$from\" id=\"retour\" class=\"btn btn-primary btn-lg\" >Retour</a>";
                 $tabStagiaires = getListeStag();
                 $compte = 0;
 
-
-    
-                foreach ($tabStagiaires as $stag)  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
-                {//Créer des cartes pour chaques valeurs dans le tableau
-
+                foreach ($tabStagiaires as $stag)
+                {
                     $codeStag = $stag['codeSta'];
                     $codeSect = $stag['codeSec'];
                     $nom = $stag['nomSta'];
@@ -49,7 +49,7 @@
                     $photo = strtolower($nom). "_" .strtolower($prenom);
 
                     
-            
+                    //Si $_GET['codeStag'] correspond au code stagiaire du tableau
                     if ($_GET['codeStag'] == $codeStag)
                     {
         
@@ -91,9 +91,7 @@
                                         <li>
                                             Interne: $interne
                                         </li>
-            
-            
-            
+                        
                                     </ul>
                                 </div>
                             </div>
@@ -101,7 +99,6 @@
 
                         break;
                     }
-
                     else
                     {
                         $compte++;                        
@@ -109,16 +106,19 @@
             
                 }
 
+                //Si on saisie une valeur erroné dans l'url
                 if ($compte == count($tabStagiaires))
-                {
+                {//Redirection vers la page 404
                     header("location:index.php?action=404");
                 }
     
+                //Stocke le titre de l'header et le cheminement de la vue fiche
                 $header = "Fiche Stagiaire";
                 $view = "vues/vFiche.php";
     
             }
 
+            //Si code stagiaire inexistant dans l'url, retourne vers section ou bien initiales
             else
             {
                 header("location:index.php$from");
@@ -126,14 +126,11 @@
     
         }
 
-
+        //Si un seul parametre dans l'url, action = fiche, retourne vers trombi
         else
         {
             header("location:index.php?action=trombi");
         }
-
-
-
         
     }
         
