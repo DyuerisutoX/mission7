@@ -1,0 +1,107 @@
+/*!
+ * Start Bootstrap - Business Frontpage (https://startbootstrap.com/templates/business-frontpage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+ .bg-primary {
+    background-color: #874FB3!important;
+  }
+  
+  .btn-primary {
+    background-color: #874FB3!important;
+    border-color: #874FB3;
+  }
+  
+  .bg-dark{
+    background-color: #5b4b66!important;
+  }
+  
+  #msgKO
+  {
+    color : red;
+  }
+
+  #aLaUne
+  {
+    width: 200px;
+    height: 200px;
+    float: right;
+  }
+
+  header
+  {
+    padding-bottom: 1rem!important;
+    padding-top: 1rem!important;
+  }
+/* 
+  #tiSect
+  {
+    margin-top : 15px;
+  }
+ */
+  #deconnexion
+  {
+    background-color: #5b4b66!important;
+    border-color: #5b4b66!important;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 0px black;
+    margin-left: 20px;
+  }
+
+  #retour
+  {
+    background-color: #5b4b66!important;
+    border-color: #5b4b66!important;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 0px black;
+  }
+
+  #retourFrom
+  {
+    background-color: #5b4b66!important;
+    border-color: #5b4b66!important;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 0px black;
+  }
+
+
+  #zoneBtn
+  {
+    display: flex;
+  }
+
+  ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+li
+{
+  color:#874FB3;
+}

@@ -1,8 +1,3 @@
-<?php
-    //Inclut le fichier data: liste des section
-    include "./data/liSections.php";
-?>
-
 <h2 id="tiSect">Rechercher les stagiaires par sections: </h2><br>
 
 <div class="row">
@@ -20,18 +15,35 @@
 
         <?php 
 
-            $section = getListeSec();
 
-            foreach ($section as list($codeSect, $libelleSect, $dateDeb, $nbreStag, $ico))  //$a,b,c,d ==> plus efficaces que d'ecrire $section[0][0] ect...
-            {//Créer des cartes pour chaques valeurs dans le tableau
+            foreach ($tabSection as $sec)
+            {//Créer des lignes pour chaques valeurs dans le tableau stagiaires
+                //Créer les var qui vont accueillir les données de notre tables stagiaires issu de la BDD
+
+                $codeSect = $sec["codeSec"];
+                $libelleSect = $sec["libSec"];
+                $dateDeb = formatDate($sec["dateDebSec"]);
+                $ico = strtolower($codeSect);
+                $nbreStag = 0;
+
+                //COmpte le nombre de stagiaires dans chaque sections
+                for ($a = 0; $a < count($tabStagiaires); $a++)
+                {
+                    if ($codeSect == $tabStagiaires[$a]['codeSec'])
+                    {
+                        $nbreStag = $nbreStag + 1;
+                    }
+                }
+
+
                 echo "
                     <tr>
                     
-                        <td><a href=\"#\" >$codeSect</a></td>
+                        <td><a href=\"index.php?action=sec&codeSect=$codeSect\" >$codeSect</a></td>
                         <td>$libelleSect</td>
                         <td>$dateDeb</td>
                         <td>$nbreStag</td>
-                        <td><img id=\"icons\" src=\"medias/icoSect/$ico.svg\" alt=\"$ico\"</td>
+                        <td><img id=\"icons\" src=\"medias/icoSect/$ico.svg\" alt=\"$ico\"></td>
                     
                     </tr>
                 ";
